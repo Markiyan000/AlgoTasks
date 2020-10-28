@@ -20,6 +20,12 @@ public class FibonacciNumberByIndex {
         return next;
     }
 
+    private static int findFibonacciNumberByIndexRecursive(int index) {
+        if(index == 1) return 0;
+        if(index == 2) return 1;
+        return findFibonacciNumberByIndex(index - 1) + findFibonacciNumberByIndex(index - 2);
+    }
+
     public static void main(String[] args) {
         System.out.println(findFibonacciNumberByIndex(1));
         System.out.println(findFibonacciNumberByIndex(2));
@@ -27,5 +33,7 @@ public class FibonacciNumberByIndex {
         System.out.println(findFibonacciNumberByIndex(5));
         System.out.println(findFibonacciNumberByIndex(8));
         System.out.println(findFibonacciNumberByIndex(7));
+
+        System.out.println(findFibonacciNumberByIndexRecursive(10));
     }
 }
