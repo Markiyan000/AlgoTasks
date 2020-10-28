@@ -25,9 +25,18 @@ public class FibonacciSeries {
         }
     }
 
+    private static void printFibonacciSeriesRecursive(int prev, int current, int index, int length) {
+        if (index >= length) return;
+        int next = prev + current;
+        System.out.print(next + " ");
+        printFibonacciSeriesRecursive(current, next, ++index, length);
+    }
+
     public static void main(String[] args) {
         printFibonacciSeries(10);
         System.out.println();
         printFibonacciSeriesWithTwoVariables(10);
+        System.out.print("\n0 1 ");
+        printFibonacciSeriesRecursive(0, 1, 2, 10);
     }
 }
