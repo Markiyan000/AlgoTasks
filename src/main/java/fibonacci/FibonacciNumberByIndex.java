@@ -23,7 +23,7 @@ public class FibonacciNumberByIndex {
     private static int findFibonacciNumberByIndexRecursive(int index) {
         if(index == 1) return 0;
         if(index == 2) return 1;
-        return findFibonacciNumberByIndex(index - 1) + findFibonacciNumberByIndex(index - 2);
+        return findFibonacciNumberByIndexRecursive(index - 1) + findFibonacciNumberByIndexRecursive(index - 2);
     }
 
     public static void main(String[] args) {
